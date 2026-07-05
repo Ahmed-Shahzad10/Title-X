@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Title-X{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="bubble-field" aria-hidden="true">
+        <span class="bubble bubble-one"></span>
+        <span class="bubble bubble-two"></span>
+        <span class="bubble bubble-three"></span>
+        <span class="bubble bubble-four"></span>
+        <span class="bubble bubble-five"></span>
+    </div>
+
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="{{ url_for('home') }}" aria-label="Title-X home">
+                <span class="brand-mark">TX</span>
+                <span>Title-X</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('tool') }}">Tool</a>
+                <a href="{{ url_for('faq') }}">FAQ</a>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="site-footer">
+            Built by Ahmed Shahzad
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
