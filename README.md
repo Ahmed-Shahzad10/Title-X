@@ -8,4 +8,4 @@ Generates 10 optimized product titles from your product details using AI.
 - Python, Flask, Groq API, LLaMA 3.1
 
 ## Live demo
-[link here once deployed]
+https://title-x-production-0183.up.railway.app/tool
